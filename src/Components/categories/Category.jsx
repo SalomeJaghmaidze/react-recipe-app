@@ -7,37 +7,36 @@ import React from 'react'
 function Category() {
   return (
     <CategoryList>
-      <NavLink to={'/cuisine/Italian'}>
+      <NavLink style={linkStyle} to={'/cuisine/Italian'}>
       <CategoryItem>
-        <FaPizzaSlice></FaPizzaSlice>
+        <FaPizzaSlice style={iconStyle}></FaPizzaSlice>
         <CategoryTitle>Italian</CategoryTitle>
       </CategoryItem>
       </NavLink>
 
-      <NavLink to={'/cuisine/American'}>
+      <NavLink style={linkStyle} to={'/cuisine/American'}>
       <CategoryItem>
-        <FaHamburger></FaHamburger>
+        <FaHamburger style={iconStyle}></FaHamburger>
         <CategoryTitle>American</CategoryTitle>
       </CategoryItem>
       </NavLink>
 
-      <NavLink to={'/cuisine/Thai'}>
+      <NavLink style={linkStyle} to={'/cuisine/Thai'}>
       <CategoryItem>
-        <GiNoodles></GiNoodles>
+        <GiNoodles style={iconStyle}></GiNoodles>
         <CategoryTitle>Thai</CategoryTitle>
       </CategoryItem>
-      </NavLink>
-
-      <NavLink to={'/cuisine/Japanese'}>
-      <CategoryItem>
-        <GiChopsticks></GiChopsticks>
-        <CategoryTitle>Japanese</CategoryTitle>
-      </CategoryItem>
-      </NavLink>
-      
-        
+      </NavLink>    
     </CategoryList>
   )
+}
+
+const iconStyle = {
+  color: 'white',
+}
+
+const linkStyle = {
+  textDecoration: 'none',
 }
 
 export default Category
