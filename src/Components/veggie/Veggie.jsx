@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import {
   Wrapper,
   Header,
@@ -51,11 +52,13 @@ export default function Veggie() {
               {veggie.map((recipe) => {
                 return (
                   <SplideSlide key={recipe.id}>
+                    <Link to={"/recipe/" + recipe.id} style={{ textDecoration: "none" }}>
                     <Card>
                       <Image src={recipe.image} alt={recipe.title} />
                       <Title>{recipe.title}</Title>
                       <Gradient></Gradient>
                     </Card>
+                    </Link>
                   </SplideSlide>
                 );
               })}
