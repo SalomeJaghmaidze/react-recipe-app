@@ -11,7 +11,7 @@ function App() {
      <Search></Search>
      <Category></Category>
      <Pages></Pages>
-     </BrowserRouter>
+      </BrowserRouter>
     </div>
   );
 }
